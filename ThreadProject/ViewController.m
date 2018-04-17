@@ -8,13 +8,16 @@
 
 #import "ViewController.h"
 #import "LN_GCD.h"
+#import "OperationObject.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *_gcdTableData;
+    NSArray *_operationData;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) LN_GCD *gcdObject;
+@property (nonatomic, strong) OperationObject *operationObject;
 
 @end
 
@@ -33,6 +36,22 @@
 -(void)initData{
     _gcdTableData = @[@"异步+并行",@"异步+串行",@"异步+主队列",@"同步+并行",@"同步+串行",@"同步+主队列(死锁)",@"死锁测试：同步+并行",@"死锁测试：同步+串行",@"异步栅栏",@"group queue + notify"];
     self.gcdObject = [[LN_GCD alloc] init];
+    
+    _operationData = @[@"NSInvocationOperation封装任务",@"NSBlockOperation封装任务"];
+    self.operationObject = [[OperationObject alloc] init];
+}
+
+-(void)operationMethod:(NSInteger)index{
+    switch (index) {
+        case 0:
+            [self.operationObject useInvocationOperation];
+            break;
+        case 1:
+            [self.operationObject useBlockOperation];
+            break;
+        default:
+            break;
+    }
 }
 
 -(void)gcdMethod:(NSInteger)index{
@@ -74,7 +93,7 @@
 
 #pragma mark - UITableView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger rtn = 0;
@@ -82,7 +101,9 @@
         case 0:
             rtn = _gcdTableData.count;
             break;
-            
+        case 1:
+            rtn = _operationData.count;
+            break;
         default:
             break;
     }
@@ -97,7 +118,9 @@
         case 0:
             cell.textLabel.text = _gcdTableData[indexPath.row];
             break;
-            
+        case 1:
+            cell.textLabel.text = _operationData[indexPath.row];
+            break;
         default:
             break;
     }
@@ -110,7 +133,9 @@
         case 0:
             rtn = @"GCD";
             break;
-            
+        case 1:
+            rtn = @"Operation";
+            break;
         default:
             break;
     }
@@ -121,6 +146,9 @@
     if(indexPath.section == 0){
         //GCD
         [self gcdMethod:indexPath.row];
+    }else if(indexPath.section == 1){
+        //Operation
+        [self operationMethod:indexPath.row];
     }
     
 }

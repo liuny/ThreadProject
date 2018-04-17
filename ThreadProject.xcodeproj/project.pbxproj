@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D23AB3A20863CF400597498 /* OperationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23AB3920863CF400597498 /* OperationObject.m */; };
 		5DD3A3EA2085970B00E81570 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3A3E92085970B00E81570 /* AppDelegate.m */; };
 		5DD3A3ED2085970B00E81570 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3A3EC2085970B00E81570 /* ViewController.m */; };
 		5DD3A3F02085970B00E81570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD3A3EE2085970B00E81570 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D23AB3820863CF400597498 /* OperationObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationObject.h; sourceTree = "<group>"; };
+		5D23AB3920863CF400597498 /* OperationObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationObject.m; sourceTree = "<group>"; };
 		5DD3A3E52085970B00E81570 /* ThreadProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD3A3E82085970B00E81570 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DD3A3E92085970B00E81570 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D23AB372086344300597498 /* NSOperation */ = {
+			isa = PBXGroup;
+			children = (
+				5D23AB3820863CF400597498 /* OperationObject.h */,
+				5D23AB3920863CF400597498 /* OperationObject.m */,
+			);
+			path = NSOperation;
+			sourceTree = "<group>";
+		};
 		5DD3A3DC2085970B00E81570 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +73,7 @@
 		5DD3A3E72085970B00E81570 /* ThreadProject */ = {
 			isa = PBXGroup;
 			children = (
+				5D23AB372086344300597498 /* NSOperation */,
 				5DD3A4012085ED6F00E81570 /* GCD */,
 				5DD3A3E82085970B00E81570 /* AppDelegate.h */,
 				5DD3A3E92085970B00E81570 /* AppDelegate.m */,
@@ -157,6 +170,7 @@
 			files = (
 				5DD3A3ED2085970B00E81570 /* ViewController.m in Sources */,
 				5DD3A3F82085970B00E81570 /* main.m in Sources */,
+				5D23AB3A20863CF400597498 /* OperationObject.m in Sources */,
 				5DD3A4002085A1CF00E81570 /* LN_GCD.m in Sources */,
 				5DD3A3EA2085970B00E81570 /* AppDelegate.m in Sources */,
 			);
