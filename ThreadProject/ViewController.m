@@ -37,7 +37,7 @@
     _gcdTableData = @[@"异步+并行",@"异步+串行",@"异步+主队列",@"同步+并行",@"同步+串行",@"同步+主队列(死锁)",@"死锁测试：同步+并行",@"死锁测试：同步+串行",@"异步栅栏",@"group queue + notify"];
     self.gcdObject = [[LN_GCD alloc] init];
     
-    _operationData = @[@"NSInvocationOperation封装任务",@"NSBlockOperation封装任务"];
+    _operationData = @[@"NSInvocationOperation封装任务",@"NSBlockOperation封装任务",@"NSBlockOperation addExcecutionBlock",@"自定义NSOperation",@"NSOperationQueue",@"Operation依赖(同queue)",@"Operation依赖(不同queue)",@"优先级",@"线程非安全：开启上海、北京售票",@"线程安全：开启上海、北京售票"];
     self.operationObject = [[OperationObject alloc] init];
 }
 
@@ -48,6 +48,32 @@
             break;
         case 1:
             [self.operationObject useBlockOperation];
+            break;
+        case 2:
+            [self.operationObject useBlockAddExecution];
+            break;
+        case 3:
+            [self.operationObject useCustomOperation];
+            break;
+        case 4:
+            [self.operationObject useOperationQueue];
+            break;
+        case 5:
+            [self.operationObject useOperationDependency];
+            break;
+        case 6:
+            [self.operationObject useOperationDependencyNotSameQueue];
+            break;
+        case 7:
+            [self.operationObject usePriorityForOperation];
+            break;
+        case 8:
+            [self.operationObject saleTicketInShangHai:NO];
+            [self.operationObject saleTicketInBeiJing:NO];
+            break;
+        case 9:
+            [self.operationObject saleTicketInBeiJing:YES];
+            [self.operationObject saleTicketInShangHai:YES];
             break;
         default:
             break;

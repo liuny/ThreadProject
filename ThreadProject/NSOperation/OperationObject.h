@@ -15,4 +15,21 @@
 
 //使用NSBlockOperation封装任务
 -(void)useBlockOperation;
+-(void)useBlockAddExecution;
+
+//自定义Operation
+-(void)useCustomOperation;
+
+//NSOperationQueue
+-(void)useOperationQueue;
+//operation依赖
+-(void)useOperationDependency;
+//不同操作队列依赖测试
+-(void)useOperationDependencyNotSameQueue;
+//优先级
+-(void)usePriorityForOperation;
+
+//线程安全
+-(void)saleTicketInShangHai:(BOOL)isSafe;
+-(void)saleTicketInBeiJing:(BOOL)isSafe;
 @end

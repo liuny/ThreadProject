@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D23AB3A20863CF400597498 /* OperationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23AB3920863CF400597498 /* OperationObject.m */; };
+		5D510B012086E830007B7786 /* LNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510B002086E830007B7786 /* LNOperation.m */; };
+		5D510B0420872409007B7786 /* SaleTicketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510B0320872409007B7786 /* SaleTicketObject.m */; };
 		5DD3A3EA2085970B00E81570 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3A3E92085970B00E81570 /* AppDelegate.m */; };
 		5DD3A3ED2085970B00E81570 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3A3EC2085970B00E81570 /* ViewController.m */; };
 		5DD3A3F02085970B00E81570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD3A3EE2085970B00E81570 /* Main.storyboard */; };
@@ -20,6 +22,10 @@
 /* Begin PBXFileReference section */
 		5D23AB3820863CF400597498 /* OperationObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationObject.h; sourceTree = "<group>"; };
 		5D23AB3920863CF400597498 /* OperationObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationObject.m; sourceTree = "<group>"; };
+		5D510AFF2086E830007B7786 /* LNOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNOperation.h; sourceTree = "<group>"; };
+		5D510B002086E830007B7786 /* LNOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNOperation.m; sourceTree = "<group>"; };
+		5D510B0220872409007B7786 /* SaleTicketObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaleTicketObject.h; sourceTree = "<group>"; };
+		5D510B0320872409007B7786 /* SaleTicketObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaleTicketObject.m; sourceTree = "<group>"; };
 		5DD3A3E52085970B00E81570 /* ThreadProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD3A3E82085970B00E81570 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DD3A3E92085970B00E81570 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +56,10 @@
 			children = (
 				5D23AB3820863CF400597498 /* OperationObject.h */,
 				5D23AB3920863CF400597498 /* OperationObject.m */,
+				5D510AFF2086E830007B7786 /* LNOperation.h */,
+				5D510B002086E830007B7786 /* LNOperation.m */,
+				5D510B0220872409007B7786 /* SaleTicketObject.h */,
+				5D510B0320872409007B7786 /* SaleTicketObject.m */,
 			);
 			path = NSOperation;
 			sourceTree = "<group>";
@@ -169,8 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DD3A3ED2085970B00E81570 /* ViewController.m in Sources */,
+				5D510B012086E830007B7786 /* LNOperation.m in Sources */,
 				5DD3A3F82085970B00E81570 /* main.m in Sources */,
 				5D23AB3A20863CF400597498 /* OperationObject.m in Sources */,
+				5D510B0420872409007B7786 /* SaleTicketObject.m in Sources */,
 				5DD3A4002085A1CF00E81570 /* LN_GCD.m in Sources */,
 				5DD3A3EA2085970B00E81570 /* AppDelegate.m in Sources */,
 			);
